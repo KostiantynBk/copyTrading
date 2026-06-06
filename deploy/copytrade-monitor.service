@@ -1,0 +1,17 @@
+[Unit]
+Description=X Copytrade Monitor
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/copyTrading
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/copyTrading/.venv/bin/copytrade-monitor run
+Restart=always
+RestartSec=10
+User=copytrade
+Group=copytrade
+
+[Install]
+WantedBy=multi-user.target

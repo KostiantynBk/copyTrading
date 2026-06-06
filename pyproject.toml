@@ -1,0 +1,24 @@
+[project]
+name = "x-copytrade-monitor"
+version = "0.1.0"
+description = "Monitor X profiles, extract trading ideas with AI, and report corroborating opinions."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.30.0",
+    "playwright>=1.44.0",
+    "pydantic>=2.7.0",
+]
+
+[project.scripts]
+copytrade-monitor = "copytrade_monitor.main:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

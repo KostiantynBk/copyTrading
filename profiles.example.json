@@ -1,0 +1,10 @@
+[
+  {
+    "handle": "trader_one",
+    "display_name": "Trader One"
+  },
+  {
+    "handle": "investor_two",
+    "display_name": "Investor Two"
+  }
+]
